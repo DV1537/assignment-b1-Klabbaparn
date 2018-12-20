@@ -8,6 +8,11 @@ struct BoundBox
 {
 	Point upperLeft;
 	Point lowerRight;
+	friend std::ostream& operator<<(std::ostream& os, const BoundBox& rhs)
+	{
+		os << "(" << rhs.upperLeft.getX() << "," << rhs.upperLeft.getY() << ")" << "(" << rhs.lowerRight.getX() << "," << rhs.lowerRight.getY() << ")";
+		return os;
+	}
 };
 
 class Shape

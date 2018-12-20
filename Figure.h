@@ -15,7 +15,7 @@ public:
 	Figure() {};
 	~Figure() { delete[] m_arr; };
 	void addShape(Polygon* s);
-	void getBoundingBox();
+	BoundBox getBoundingBox();
 	friend std::ostream& operator<<(std::ostream& os, const Figure& rhs);
 
 private:

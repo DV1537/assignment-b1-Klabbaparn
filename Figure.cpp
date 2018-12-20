@@ -34,7 +34,7 @@ void Figure::addShape(Polygon* s)
 	}
 }
 
-void Figure::getBoundingBox()
+BoundBox Figure::getBoundingBox()
 {
 	BoundBox ret;
 	double xMin = 0;
@@ -60,8 +60,7 @@ void Figure::getBoundingBox()
 	Point lowerR(xMax, yMin);
 	finalReturn.upperLeft = upperL;
 	finalReturn.lowerRight = lowerR;
-
-	std::cout << "(" << finalReturn.upperLeft.getX() << "," << finalReturn.upperLeft.getY() << ")" << " " << "(" << finalReturn.lowerRight.getX() << "," << finalReturn.lowerRight.getY() << ")" << std::endl;
+	return finalReturn;
 }
 
 std::ostream& operator<<(std::ostream& os, const Figure& rhs)

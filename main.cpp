@@ -84,8 +84,14 @@ int main(int argc, const char *argv[])
 	Figgy.addShape(&arrayOfShapes[0]);
 	Figgy.addShape(&arrayOfShapes[1]);
 	Figgy.addShape(&arrayOfShapes[2]);
+	Figgy.addShape(&arrayOfShapes[3]);
+	Figgy.addShape(&arrayOfShapes[4]);
+	Figgy.addShape(&arrayOfShapes[5]);
+	Figgy.addShape(&arrayOfShapes[6]);
+	Figgy.addShape(&arrayOfShapes[7]);
 	std::cout << Figgy << std::endl;
-	Figgy.getBoundingBox();
+
+	std::cout << Figgy.getBoundingBox() << std::endl;
 
 	delete[] arrayOfShapes;
 	arrayOfShapes = nullptr;
